@@ -27,6 +27,9 @@
       border-radius: 4px;
       cursor: pointer;
     }
+    a {
+      display: block;
+    }
   </style>
 </head>
 <body>
@@ -35,13 +38,20 @@
     <h2>For those shit hot blog post titles that everyone will want to read!</h2>
   </header>
   <main>
-    <blockquote id="results">Click below to generate your title...</blockquote>
+    <blockquote>
+      <span id="results">Click below to generate your title...</span>
+    </blockquote>
     <button onClick="createTitle()">Make me famous!</button>
+    <a id="share" href="https://twitter.com/intent/tweet?text=Generate viral blog posts with Viralizr: http://goo.gl/80Rk3v">Tweet this</a>
   </main>
   <script>
+    var resultsEl = document.getElementById('results');
+    var shareEl = document.getElementById('share');
+
     createTitle = function(){
-      var el = document.getElementById('results');
-      el.innerHTML = buildTitle();
+      var title = buildTitle();
+      resultsEl.innerHTML = title;
+      shareEl.href = 'https://twitter.com/intent/tweet?text="' + title + '" - Made with viralizr: http://goo.gl/80Rk3v';
     };
 
     buildTitle = function(){
