@@ -1,6 +1,6 @@
 # Viralizr
 
-Guaranteed viral post title generator
+Title generator for your next blog post
 
 ### Development
 
