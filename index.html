@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="no">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Viralizr</title>
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+  <style>
+    html,
+    button { font-family: 'Comfortaa', cursive; }
+    body { text-align: center; }
+    h1 { margin-top: 4rem; }
+    blockquote {
+      padding: 2rem;
+      margin: 3rem 0;
+      font-size: 1.2rem;
+      background: repeating-linear-gradient(45deg,#eaebee,#eaebee 20px,#eff0f3 0,#eff0f3 40px);
+    }
+    button {
+      padding: 1rem 2rem;
+      margin: 2rem;
+      border: 0;
+      background-color: gold;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🤘Viralizr🤘</h1>
+    <h2>For those shit hot blog post titles that everyone will want to read!</h2>
+  </header>
+  <main>
+    <blockquote id="results">Click below to generate your title...</blockquote>
+    <button onClick="createTitle()">Make me famous!</button>
+  </main>
+  <script>
+    createTitle = function(){
+      var el = document.getElementById('results');
+      el.innerHTML = buildTitle();
+    };
+
+    buildTitle = function(){
+      return getRandomItem(data.intro) + ' ' + getRandomItem(data.middle) + ' ' + getRandomItem(data.outro);
+    }
+
+    getRandomItem = function(arr){
+      return arr[Math.floor(Math.random() * arr.length)];
+    }
+
+    var data = {
+      intro: [
+        '10 Lessons about',
+        'I quit my job and learned',
+        'CSS is dead!',
+        'JavaScript in 2017:',
+        'No,',
+        'The miracle of',
+        'There, I said it!',
+        'I monetized',
+        'Yes!',
+        'I rewrote JavaScript using',
+        '12 reasons why',
+        'What running a startup has taught me about',
+        'The ultimate guide to',
+        '241% traffic growth through',
+        'New research suggests',
+        'Announcing rodent.js: a framework for',
+        'The data has spoken:',
+        'How i created a startup specialising in',
+      ],
+      middle: [
+        'Silicon Valley',
+        'startups',
+        'React',
+        'UX',
+        'innovative tech',
+        'gopher.js:',
+        'IOT segways',
+        'Donald Trump',
+        'AI',
+        'big data',
+        'napster',
+        'Douglas Crockford',
+        'dot matrix screens',
+        'ASP',
+        'growth hacking',
+        'fax machines',
+        'CSS',
+        'Virtual Reality',
+        'open-source',
+        'Eric Elliott',
+        'Functional programming',
+      ],
+      outro: [
+        'long live Elm!',
+        'is the future',
+        'is the hottest new thing',
+        'will not save your business',
+        'is a crock of shit',
+        'could end your career!',
+        'will be huge in 2017',
+        'announced by Brendon Eich',
+        'Could save your company',
+        'and now Zuckerberg won\'t stop calling',
+        'that will leave you amazed',
+        'could be the next big thing',
+        'is dead!',
+        'will lead the web 3.0 revolution',
+        'could save your marriage!',
+        'considered harmful',
+        'you would be a fool to miss!',
+        'taught me js is dead',
+        'proven to be racist',
+      ],
+    };
+  </script>
+</body>
+</html>
