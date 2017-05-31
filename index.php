@@ -56,7 +56,7 @@
     <blockquote>
       <span id="results">Click below to generate your title...</span>
     </blockquote>
-    <button onClick="createTitle()">Make me famous!</button>
+    <button id="button" onClick="createTitle()">Make me famous!</button>
     <a class="share" id="share" href="https://twitter.com/intent/tweet?text=Generate viral blog posts with Viralizr: http://goo.gl/80Rk3v">Tweet this</a>
     <small>API available at <a href="api.php?amount=5">/api</a></small>
     <code>example: /api.php?amount=3</code>
@@ -64,10 +64,12 @@
   <script>
     var resultsEl = document.getElementById('results');
     var shareEl = document.getElementById('share');
+    var buttonEl = document.getElementById('button');
 
     createTitle = function(){
       var title = buildTitle();
       resultsEl.innerHTML = title;
+      buttonEl.innerHTML = getRandomItem(buttonTexts);
       shareEl.href = 'https://twitter.com/intent/tweet?text="' + title + '" - Made with viralizr: http://goo.gl/80Rk3v';
     };
 
@@ -79,6 +81,7 @@
       return arr[Math.floor(Math.random() * arr.length)];
     }
 
+    var buttonTexts = ['Try again..', 'One more!', 'Another one!'];
     var data = JSON.parse(<?php print json_encode($data); ?>);
   </script>
 
