@@ -50,11 +50,12 @@
 <body>
   <header>
     <h1>🤘Viralizr🤘</h1>
-    <h2>For those shit hot blog post titles that everyone will want to read!</h2>
+    <h2>Blog post title generator</h2>
+    <p>For those shit hot blog post titles that everyone will want to read!</p>
   </header>
   <main>
     <blockquote>
-      <span id="results">Click below to generate your title...</span>
+      <span id="results">Click below to generate a random title...</span>
     </blockquote>
     <button id="button" onClick="createTitle()">Make me famous!</button>
     <a class="share" id="share" href="https://twitter.com/intent/tweet?text=Generate viral blog posts with Viralizr: http://goo.gl/80Rk3v">Tweet this</a>
